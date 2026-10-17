@@ -1,0 +1,220 @@
+
+body {
+
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Header / Título */
+h1 {
+
+    text-align: center;
+    margin: 20px 0;
+
+}
+
+/* Menu Navegação Responsivo */
+.menu {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+    background-color: #867e7e;
+    box-shadow: 0 4px 12px rgba(133, 132, 132, 0.3);
+    padding: 5px;
+
+}
+
+.menu a {
+
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    border-radius: 20px;
+
+}
+
+.menu a:hover { 
+
+    background-color: #f1f1f1;
+    color: black;
+    border-radius: 20px;
+
+} 
+
+/* Estrutura Principal Layout Flexbox */
+.container {
+
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 20px;
+    box-sizing: border-box;
+
+}
+
+/* Caixas de Conteúdo */
+.box {
+
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+
+}
+
+.box.p { 
+
+    flex: 2; 
+    padding: 30px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    width: 100%;
+
+}
+
+.box.t {
+
+    flex: 1; 
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+.nave {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    font-size: 18px;
+    max-width: 100%;
+
+}
+
+
+/* Textos e Mídia */
+.texto {
+
+    width: 100%;
+    font-size: 1rem;
+    line-height: 1.6;
+
+}
+
+figure {
+
+    margin: 15px 0;
+    width: 100%;
+    text-align: center;
+
+}
+
+img {
+
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+
+}
+
+/* Vídeos e Iframes Fluídos */
+iframe {
+
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border: 0;
+    border-radius: 8px;
+    margin: 15px 0;
+
+}
+
+/* Formulário e Controles */
+form {
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-sizing: border-box;
+
+}
+
+form input, 
+form textarea {
+
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+
+}
+
+/* Rodapé */
+footer {
+
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #867e7e;
+    color: #ffffff;
+    width: 90%;
+    max-width: 1200px;
+    box-sizing: border-box;
+    border-radius: 10px;
+
+}
+
+footer a {
+
+    color: #fff;
+    
+}
+
+/* --- REGRAS MOBILE (Celulares e Tablets) --- */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Empilha os blocos verticalmente */
+        padding: 10px;
+    }
+
+    .box.p, .box.t {
+        padding: 15px;
+    }
+
+    .menu {
+        flex-direction: column;
+    }
+
+    .menu a {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 12px;
+    }
+
+    form, footer {
+        width: 95%;
+    }
+}
